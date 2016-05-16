@@ -1,0 +1,17 @@
+.Hero {
+  background-size: cover;
+  padding: 100px 0;
+  color: white;
+}
+
+.content {
+  composes: content from "./base/layout";
+}
+
+.center {
+  text-align: center;
+}
+
+.row {
+  composes: row from "./base/layout";
+}

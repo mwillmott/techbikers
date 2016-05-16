@@ -1,0 +1,10 @@
+/* text-align */
+.textRight  { text-align: right; }
+.textLeft   { text-align: left; }
+.textCenter { text-align: center; }
+
+.textSmallcaps {
+  font-variant: small-caps;
+  text-transform: lowercase;
+  letter-spacing: 0.1em;
+}

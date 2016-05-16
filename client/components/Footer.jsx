@@ -1,9 +1,11 @@
 import React from "react";
 
+import styles from "../styles/Footer";
+
 import AuthMenu from "../containers/AuthMenu";
 
 const Footer = () => (
-  <div role="footer">
+  <div role="footer" className={styles.Footer}>
     <div className="content">
       <div className="row">
         <div className="span2">

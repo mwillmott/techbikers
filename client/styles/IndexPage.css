@@ -1,0 +1,57 @@
+@import "./base/variables";
+
+.IndexPage {
+
+}
+
+.content {
+  composes: content from "./base/layout";
+}
+
+.strap {
+  display: block;
+  line-height: 1;
+}
+
+.strap1 {
+  composes: strap;
+  font-size: 130px;
+}
+
+.strap2 {
+  composes: strap;
+  font-size: 22px;
+}
+
+.strap3 {
+  composes: strap;
+  font-size: 166px;
+}
+
+.strapAmp {
+  display: inline-block;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 48px;
+  transform: translate(0, 5px);
+}
+
+.stat {
+  composes: row from "./base/layout";
+}
+
+.statInner {
+  margin-top: var(--baseLineHeight);
+  text-align: center;
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 1;
+
+  & small {
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}

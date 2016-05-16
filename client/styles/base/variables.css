@@ -20,5 +20,5 @@
   --numberOfColumns: 6;
   --gridGutter: 40px;
   --columnWidth: 100px;
-  /*--pageWidth: calc(columnWidth * $numberOfColumns + ($gridGutter * ($numberOfColumns - 1));*/
+  --pageWidth: calc(var(--columnWidth) * var(--numberOfColumns) + (var(--gridGutter) * var(--numberOfColumns) - 1));
 }

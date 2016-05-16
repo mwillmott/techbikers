@@ -1,0 +1,56 @@
+@import "./variables";
+
+.content {
+  width: var(--pageWidth);
+  margin: auto;
+}
+
+.row {
+  margin-left: calc(-1 * var(--gridGutter));
+}
+.span {
+  float: left;
+  min-height: 1px;
+  margin-left: var(--gridGutter);
+}
+
+.span1 {
+  composes: span;
+  width: calc(var(--columnWidth) * 1 + var(--gridGutter) * 0);
+}
+.span2 {
+  composes: span;
+  width: calc(var(--columnWidth) * 2 + var(--gridGutter) * 1);
+}
+.span3 {
+  composes: span;
+  width: calc(var(--columnWidth) * 3 + var(--gridGutter) * 2);
+}
+.span4 {
+  composes: span;
+  width: calc(var(--columnWidth) * 4 + var(--gridGutter) * 3);
+}
+.span5 {
+  composes: span;
+  width: calc(var(--columnWidth) * 5 + var(--gridGutter) * 4);
+}
+.span6 {
+  composes: span;
+  width: calc(var(--columnWidth) * 6 + var(--gridGutter) * 5);
+}
+
+.offset1 {
+  margin-left: calc(var(--columnWidth) * 1 + var(--gridGutter) * 2);
+}
+.offset2 {
+  margin-left: calc(var(--columnWidth) * 2 + var(--gridGutter) * 3);
+}
+.offset3 {
+  margin-left: calc(var(--columnWidth) * 3 + var(--gridGutter) * 4);
+}
+.offset4 {
+  margin-left: calc(var(--columnWidth) * 4 + var(--gridGutter) * 5);
+}
+.offset5 {
+  margin-left: calc(var(--columnWidth) * 5 + var(--gridGutter) * 6);
+}

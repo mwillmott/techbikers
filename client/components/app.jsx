@@ -5,6 +5,8 @@ import Modal from "react-modal";
 import { SEGMENT_TRACKING_KEY } from "../config";
 import { modalStyles } from "../utils/modal";
 
+import styles from "../styles/App";
+
 import AnalyticsLoader from "./AnalyticsLoader";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -12,7 +14,7 @@ import AuthModal from "../containers/AuthModal";
 
 const App = ({children, modalChildren}) => (
   <IntlProvider locale="en">
-    <div>
+    <div className={styles.App}>
       <AnalyticsLoader segmentKey={SEGMENT_TRACKING_KEY} />
       <Header />
       {children}

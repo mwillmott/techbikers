@@ -1,0 +1,16 @@
+@import "./base/variables";
+
+.Footer {
+  background: #392C3A;
+  margin-top: calc(var(--baseLineHeight) * 2);
+  padding: calc(var(--baseLineHeight) * 5) 0;
+  color: #F5EFEA;
+
+  & a {
+    color: #FDEC18;
+  }
+
+  & nav {
+    list-style: none;
+  }
+}

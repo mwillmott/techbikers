@@ -1,0 +1,28 @@
+.RideCard {
+  display: inline-block;
+  overflow: hidden;
+  border: 2px solid #cccccc;
+  border-radius: 5px;
+  width: 360px;
+  margin: 0 20px 20px 0;
+  transition: border ease .3s;
+  list-style: none;
+  position: relative;
+
+  &:hover {
+    border-color: #4494c7;
+  }
+
+  & > a:hover {
+    text-decoration: none;
+  }
+}
+
+.header {
+  padding: 10px;
+
+  & h2,
+  & h4 {
+    margin: 0;
+  }
+}
