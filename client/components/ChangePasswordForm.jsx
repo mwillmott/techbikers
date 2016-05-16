@@ -1,5 +1,7 @@
 import React from "react";
 
+import Button from "./Button";
+
 const ChangePasswordForm = () => (
   <form>
     <h1>Change Your Password</h1>
@@ -14,7 +16,7 @@ const ChangePasswordForm = () => (
     </div>
     <div class="row">
       <p class="centerText">
-        <input type="submit" class="btn btn-primary" value="Change Password"/>
+        <Button type="submit">Change Password"</Button>
       </p>
     </div>
   </form>

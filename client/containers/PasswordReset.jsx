@@ -9,6 +9,7 @@ import forms, { Form, RenderForm } from "newforms";
 import { beginResetPassword } from "../actions/authentication";
 import { clearResetPasswordStatus } from "../actions/page";
 
+import Button from "../components/Button";
 import FormField from "../components/FormField";
 
 const SendResetLinkForm = Form.extend({
@@ -93,7 +94,7 @@ export default class PasswordReset extends Component {
               <p className="centerText">
                 OK - we've just emailed you a link to reset your password.
               </p>
-              <button className="btn btn-grey" onClick={this.resetForm}>Try again</button>
+              <Button color="grey" onClick={this.resetForm}>Try again</Button>
             </div>
           :
             <div className="content">
@@ -111,7 +112,7 @@ export default class PasswordReset extends Component {
                 </div>
                 <div className="row centerText">
                   <div className="span6">
-                    <button disabled={resetStatus === "loading"} className="btn btn-green" type="submit">Continue</button>
+                    <Button disabled={resetStatus === "loading"} type="submit">Continue</Button>
                   </div>
                 </div>
               </form>

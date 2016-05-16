@@ -6,6 +6,7 @@ import { modalStyles } from "../utils/modal";
 import requireAuthentication from "../containers/requireAuthentication";
 import { closeRideRegistrationModal } from "../actions/ride";
 
+import Button from "./Button";
 import SetupFundraising from "./SetupFundraising";
 import PreRegistrationForm from "./PreRegistrationForm";
 import CompleteRegistrationForm from "./CompleteRegistrationForm";
@@ -52,9 +53,9 @@ export default class RideRegistrationModal extends Component {
             <p>
               Awesome - we've received your application to join this ride. You'll hear from us soon
               so in the meantime, why not jump on your bike and go for a ride.</p>
-            <button className="btn btn-green" onClick={() => dispatch(closeRideRegistrationModal())}>
+            <Button onClick={() => dispatch(closeRideRegistrationModal())}>
               Great!
-            </button>
+            </Button>
           </div>
         );
 
@@ -66,7 +67,7 @@ export default class RideRegistrationModal extends Component {
                 You're all set! You've completed registration and we've received payment - all that's left
                 to do now is to setup your fundraising page and train!</p>
               <SetupFundraising {...this.props} />
-              <button className="btn btn-grey" style={{marginLeft: 10}} onClick={() => dispatch(closeRideRegistrationModal())}>Not right now</button>
+              <Button color="grey" style={{marginLeft: 10}} onClick={() => dispatch(closeRideRegistrationModal())}>Not right now</Button>
             </div>
           );
         } else {
@@ -74,7 +75,7 @@ export default class RideRegistrationModal extends Component {
             <div className="ride-registration--form">
               <p>
                 Nice work - that's all from us. On your bike and let's change lives!</p>
-              <button className="btn btn-grey" onClick={() => dispatch(closeRideRegistrationModal())}>OK!</button>
+              <Button onClick={() => dispatch(closeRideRegistrationModal())}>OK!</Button>
             </div>
           );
         }

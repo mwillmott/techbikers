@@ -10,6 +10,7 @@ import { setPageEntity } from "../actions/page";
 import requireAuthentication from "./requireAuthentication";
 import UserRidesList from "./UserRidesList";
 import Spinner from "../components/Spinner";
+import Button from "../components/Button";
 
 const mapStateToProps = (state) => {
   return {
@@ -43,7 +44,7 @@ export default class Account extends Component {
             </header>
 
             <ul className="list-unstyled">
-              <li><Link className="btn" to={`/riders/${user.id}`}>View/Edit your Rider Profile</Link></li>
+              <li><Button color="grey" to={`/riders/${user.id}`}>View/Edit your Rider Profile</Button></li>
               <li>Change your password</li>
             </ul>
 

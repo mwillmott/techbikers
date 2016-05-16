@@ -6,6 +6,7 @@ import { FormattedNumber } from "react-intl";
 import { getUserById } from "../actions/user";
 
 import Avatar from "../components/Avatar";
+import Button from "../components/Button";
 
 const mapStateToProps = (state, ownProps) => {
   const { user } = ownProps;
@@ -48,9 +49,9 @@ export default class Fundraiser extends Component {
           </p>
         </div>
 
-        <a href={pageUrl} className="btn btn-green fundraiser-sponsor-button">
+        <Button href={pageUrl} className="fundraiser-sponsor-button">
           Sponsor now
-        </a>
+        </Button>
 
         {user &&
           <Link to={`/riders/${user.id}`} className="fundraiser-link" />}

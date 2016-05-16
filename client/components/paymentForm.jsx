@@ -3,6 +3,7 @@ import forms, { Form, RenderForm, TextInput } from "newforms";
 import { autobind } from "core-decorators";
 
 import PaymentUtils from "../utils/paymentUtils";
+import Button from "./Button";
 import FormField from "./FormField";
 
 export default class PaymentForm extends Component {
@@ -160,9 +161,9 @@ export default class PaymentForm extends Component {
         </div>
 
         <div className="payment-form--submit">
-          <button className="btn btn-blue" type="submit" onClick={this.onFormSubmit}>
+          <Button color="blue" type="submit" onClick={this.onFormSubmit}>
             {submitText}
-          </button>
+          </Button>
         </div>
       </form>
     );

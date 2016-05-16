@@ -8,6 +8,7 @@ import forms, { Form, RenderForm } from "newforms";
 
 import { confirmResetPasswordAndAuthenticate } from "../actions/authentication";
 
+import Button from "../components/Button";
 import FormField from "../components/FormField";
 import ErrorMessage from "../components/ErrorMessage";
 
@@ -103,7 +104,7 @@ export default class PasswordResetConfirm extends Component {
               </div>
               <div className="row centerText">
                 <div className="span6">
-                  <button className="btn btn-green" type="submit">Reset Password & Login</button>
+                  <Button type="submit">Reset Password & Login</Button>
                 </div>
               </div>
             </form>

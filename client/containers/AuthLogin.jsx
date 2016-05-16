@@ -5,6 +5,8 @@ import { autobind } from "core-decorators";
 import { authenticateWithToken } from "../actions/authentication";
 import { getAuthenticationToken } from "../selectors/user";
 
+import Button from "../components/Button";
+
 const mapStateToProps = state => {
   return {
     token: getAuthenticationToken(state)
@@ -19,7 +21,7 @@ export default class AuthLogin extends Component {
   };
 
   static defaultProps = {
-    className: "btn-blue",
+    color: "blue",
     backend: "facebook",
     popup: {
       resizable: 1,
@@ -66,11 +68,11 @@ export default class AuthLogin extends Component {
   }
 
   render() {
-    const { className, buttonText, backend } = this.props;
+    const { buttonText, backend, ...props } = this.props;
     return (
-      <button className={`btn ${className}`} type="submit" onClick={this.startAuth}>
+      <Button {...props} type="submit" onClick={this.startAuth}>
         {buttonText || `Login with ${backend}`}
-      </button>
+      </Button>
     );
   }
 }

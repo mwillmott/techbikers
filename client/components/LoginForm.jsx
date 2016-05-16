@@ -3,6 +3,7 @@ import { autobind } from "core-decorators";
 import forms, { Form, RenderForm } from "newforms";
 import { Link } from "react-router";
 
+import Button from "./Button";
 import FormField from "./FormField";
 
 const LoginFormSchema = Form.extend({
@@ -54,7 +55,7 @@ export default class LoginForm extends Component {
         </div>
         <div className="row centerText">
           <div className="span6">
-            <input type="submit" value="Login" className="btn" />
+            <Button type="submit">Login</Button>
           </div>
           <div className="span6">
             Don"t have an account yet? <Link to={{ pathname: "/signup", state: { modal: true, returnTo }}}>Create one!</Link>

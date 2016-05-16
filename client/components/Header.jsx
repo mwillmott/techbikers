@@ -4,6 +4,8 @@ import classNames from "classnames";
 
 import styles from "../styles/Header";
 
+import Button from "./Button";
+
 export default class Header extends Component {
   static propTypes = {
     menu: PropTypes.array
@@ -41,7 +43,7 @@ export default class Header extends Component {
 
           <a href="http://blog.techbikers.com/" className={styles.navigationItem}>Blog</a>
 
-          <Link className={classNames(styles.donateButton, {"btn btn-green": true})} to="/donate">Donate!</Link>
+          <Button className={styles.donateButton} to="/donate">Donate!</Button>
         </nav>
       </header>
     );

@@ -5,6 +5,7 @@ import { autobind } from "core-decorators";
 
 import { registerUserForRide } from "../actions/ride";
 
+import Button from "./Button";
 import FormField from "./FormField";
 import Timestamp from "./Timestamp";
 import Spinner from "./Spinner";
@@ -84,9 +85,9 @@ export default class RideRegistrationForm extends Component {
             </div>
           </div>
           <div className="payment-form--submit">
-            <button className="btn btn-blue" type="submit" onClick={this.register}>
+            <Button color="blue" type="submit" onClick={this.register}>
               Apply for TechBikers <Timestamp value={ride.start_date} format="YYYY" />
-            </button>
+            </Button>
           </div>
         </form>
       </div>
