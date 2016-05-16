@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from "react";
+import { Link } from "react-router";
 import classNames from "classnames";
 
 import styles from "../styles/button";
@@ -16,7 +17,7 @@ export default class Button extends Component {
   static defaultProps = {
     block: false,
     fill: true,
-    color: "blue"
+    color: "green"
   };
 
   render() {
@@ -25,10 +26,10 @@ export default class Button extends Component {
       [styles.block]: block,
       [styles.noFill]: !fill
     };
-    const Element = this.props.href ? "a" : "button";
+    const Element = this.props.href ? "a" : this.props.to ? Link : "button";
 
     return (
-      <Element className={classNames(styles.Button, condClasses, styles[color], className)} {...props}>
+      <Element className={classNames(styles.Button, styles[color], condClasses, className)} {...props}>
         {children}
       </Element>
     );

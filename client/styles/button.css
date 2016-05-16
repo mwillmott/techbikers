@@ -1,8 +1,6 @@
-@import "variables";
+@import "./base/variables";
 
 .Button {
-  composes: grey from "./base/colors";
-
   display: inline-block;
   padding: 10px 40px;
   border-width: 3px;
@@ -10,8 +8,8 @@
   border-radius: 3px;
 
   text-align: center;
-  font-size: $baseFontSize;
-  line-height: $baseLineHeight;
+  font-size: var(--baseFontSize);
+  line-height: var(--baseLineHeight);
   cursor: pointer;
   text-decoration: none;
 
@@ -46,26 +44,21 @@
 }
 
 .purple {
-  composes: purpleBorder from "./base/colors";
-  composes: purpleBackground from "./base/colors";
+  composes: purpleBorder purpleBackground from "./base/colors";
 }
 
 .red {
-  composes: redBorder from "./base/colors";
-  composes: redBackground from "./base/colors";
+  composes: redBorder redBackground from "./base/colors";
 }
 
 .blue {
-  composes: blueBorder from "./base/colors";
-  composes: blueBackground from "./base/colors";
+  composes: blueBorder blueBackground from "./base/colors";
 }
 
 .green {
-  composes: greenBorder from "./base/colors";
-  composes: greenBackground from "./base/colors";
+  composes: greenBorder greenBackground from "./base/colors";
 }
 
 .yellow {
-  composes: yellowBorder from "./base/colors";
-  composes: yellowBackground from "./base/colors";
+  composes: yellowBorder yellowBackground from "./base/colors";
 }
